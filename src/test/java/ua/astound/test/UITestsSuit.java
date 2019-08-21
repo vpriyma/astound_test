@@ -1,5 +1,6 @@
 package ua.astound.test;
 
+import org.testng.SkipException;
 import org.testng.annotations.Test;
 
 import ua.astound.test.pageobject.MainHerokuAppPage;
@@ -23,5 +24,6 @@ public class UITestsSuit extends FunctionalTest{
         iframe.switchToPage();
         mainHerokuAppPage.clickBoldButton();
         new ScreenshotMaker(driver).makeAScreenshot();
+        throw new SkipException("This test is done but will be marked as skipped..");
     }
 }

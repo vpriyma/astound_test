@@ -14,14 +14,18 @@ public class ScreenshotMaker {
 
     private WebDriver driver;
 
-    private DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy_MM_dd_HH_mm_ss");
-    private LocalDateTime now = LocalDateTime.now();
+    private DateTimeFormatter dtf;
+    private LocalDateTime now;
 
     public ScreenshotMaker(WebDriver driver) {
         this.driver = driver;
     }
 
     public void makeAScreenshot() {
+
+        dtf = DateTimeFormatter.ofPattern("yyyy_MM_dd_HH_mm_ss");
+        now = LocalDateTime.now();
+
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
             FileUtils.copyFile(scrFile, new File(String.format("screenshots/screenshot%s.png", dtf.format(now))));
