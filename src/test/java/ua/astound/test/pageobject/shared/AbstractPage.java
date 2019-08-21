@@ -3,11 +3,13 @@ package ua.astound.test.pageobject.shared;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public abstract class BasePage extends PageObject {
+public abstract class AbstractPage extends PageObject {
+
+    private AbstractPage page;
 
     private static final String BASE_LINK = "//a[text()='%s']";
 
-    public BasePage(WebDriver driver) {
+    public AbstractPage(WebDriver driver) {
         super(driver);
     }
 
@@ -15,7 +17,7 @@ public abstract class BasePage extends PageObject {
         driver.findElement(By.xpath(String.format(BASE_LINK, link))).click();
     }
 
-    public void getPage() {
+    public void switchToPage() {
         driver.switchTo().defaultContent();
     }
 }

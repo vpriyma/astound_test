@@ -19,11 +19,11 @@ import ua.astound.test.utils.PropertyReader;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class TestsSuit {
+public class WSTestsSuit {
 
     @Test
     public void task1() {
-        String body = HttpRequestHelper.getResponseBody(PropertyReader.INSTANCE.getPropertyValue("baseUrl"));
+        String body = HttpRequestHelper.getResponseBody(PropertyReader.INSTANCE.getPropertyValue("serviceUrl"));
         List<User> users = Arrays.asList(new Gson().fromJson(body, User[].class));
         //output uncompleted titles for userID='9'
         users.stream().filter(user1 -> user1.getUserId() == 9 && !user1.isCompleted()).map(User::getTitle)
@@ -51,10 +51,5 @@ public class TestsSuit {
                 increasedPrices =
                 trimmedPrices.stream().map(c -> c.add(new BigDecimal(1))).collect(Collectors.toList());
         System.out.println("Increased Prices: ".concat(increasedPrices.toString()));
-    }
-
-    @Test
-    public void task3() {
-
     }
 }
