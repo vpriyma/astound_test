@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 
 public abstract class AbstractPage extends PageObject {
 
-    private AbstractPage page;
-
     private static final String BASE_LINK = "//a[text()='%s']";
 
     public AbstractPage(WebDriver driver) {

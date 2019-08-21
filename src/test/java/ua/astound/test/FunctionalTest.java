@@ -1,6 +1,5 @@
 package ua.astound.test;
 
-import org.openqa.selenium.NoSuchSessionException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -28,7 +27,7 @@ public class FunctionalTest {
     public void cleanUp() {
         try {
             driver.manage().deleteAllCookies();
-        } catch (NoSuchSessionException e) {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
