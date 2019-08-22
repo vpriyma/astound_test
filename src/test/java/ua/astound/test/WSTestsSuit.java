@@ -52,4 +52,9 @@ public class WSTestsSuit {
                 trimmedPrices.stream().map(c -> c.add(new BigDecimal(1))).collect(Collectors.toList());
         System.out.println("Increased Prices: ".concat(increasedPrices.toString()));
     }
+
+    @Test
+    public void debugTask6() {
+        System.out.println("task #6");
+    }
 }

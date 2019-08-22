@@ -13,7 +13,7 @@ import ua.astound.test.pageobject.frames.IFrame;
 import ua.astound.test.utils.ScreenshotMaker;
 
 @Guice(modules = PropertyConfigurationModule.class)
-public class UITestsSuit extends FunctionalTest{
+public class UITestsSuit extends FunctionalTest {
 
     private final String line1;
     private final String line2;
