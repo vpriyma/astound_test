@@ -1,5 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Astound Tests">
+  <listeners>
+    <listener class-name="ua.astound.test.utils.CustomReporter" />
+  </listeners>
   <test name="Tests">
     <packages>
       <package name="ua.astound.test" />

@@ -19,7 +19,7 @@ import ua.astound.test.utils.PropertyReader;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class WSTestsSuit {
+public class WSTestsSuit extends BaseSuit {
 
     @Test
     public void task1() {

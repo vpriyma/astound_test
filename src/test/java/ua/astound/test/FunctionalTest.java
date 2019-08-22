@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class FunctionalTest {
+public class FunctionalTest extends BaseSuit {
 
     protected static WebDriver driver;
 
