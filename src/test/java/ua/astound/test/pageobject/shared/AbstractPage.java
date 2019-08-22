@@ -14,8 +14,4 @@ public abstract class AbstractPage extends PageObject {
     public void clickOnLInkName(String link) {
         driver.findElement(By.xpath(String.format(BASE_LINK, link))).click();
     }
-
-    public void switchToPage() {
-        driver.switchTo().defaultContent();
-    }
 }

@@ -8,9 +8,9 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.stream.IntStream;
 
-import ua.astound.test.pageobject.shared.AbstractPage;
+import ua.astound.test.pageobject.shared.AbstractFrame;
 
-public class IFrame extends AbstractPage {
+public class IFrame extends AbstractFrame {
 
     @FindBy(xpath = "//body")
     private WebElement body;

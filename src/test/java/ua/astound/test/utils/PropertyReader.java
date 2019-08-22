@@ -14,6 +14,7 @@ public enum PropertyReader {
         properties = new Properties();
         try {
             properties.load(new FileReader("application.properties"));
+            properties.load(new FileReader("dev-data.properties"));
         } catch (IOException e) {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, e.getMessage(), e);
         }
