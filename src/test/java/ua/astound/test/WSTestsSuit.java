@@ -21,7 +21,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class WSTestsSuit extends BaseSuit {
 
-    @Test
+    @Test(description = "This is the first task of TA")
     public void task1() {
         String body = HttpRequestHelper.getResponseBody(PropertyReader.INSTANCE.getPropertyValue("serviceUrl"));
         List<User> users = Arrays.asList(new Gson().fromJson(body, User[].class));
