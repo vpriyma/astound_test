@@ -11,7 +11,7 @@ public class ReportObject {
     private List<Test> tests;
 
     @Data
-    private class Test {
+    public static class Test {
         private String name;
         private String description;
         private String status;

@@ -28,7 +28,7 @@ public class ScreenshotMaker {
 
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.copyFile(scrFile, new File(String.format("screenshots/screenshot%s.png", dtf.format(now))));
+            FileUtils.copyFile(scrFile, new File(String.format("target/screenshots/screenshot%s.png", dtf.format(now))));
         } catch (IOException e) {
             e.printStackTrace();
         }
