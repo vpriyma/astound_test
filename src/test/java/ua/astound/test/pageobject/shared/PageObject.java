@@ -3,7 +3,7 @@ package ua.astound.test.pageobject.shared;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-public class PageObject {
+public abstract class PageObject {
     protected WebDriver driver;
 
     public PageObject(WebDriver driver){
