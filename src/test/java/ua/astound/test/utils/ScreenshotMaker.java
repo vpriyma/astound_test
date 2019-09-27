@@ -22,13 +22,10 @@ public class ScreenshotMaker {
     }
 
     public void makeAScreenshot() {
-
-        dtf = DateTimeFormatter.ofPattern("yyyy_MM_dd_HH_mm_ss");
-        now = LocalDateTime.now();
-
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.copyFile(scrFile, new File(String.format("target/screenshots/screenshot%s.png", dtf.format(now))));
+            FileUtils.copyFile(scrFile, new File(String.format("target/screenshots/screenshot%s.png",
+                                                               LocalDateTime.now().toString().replaceAll(":", "_"))));
         } catch (IOException e) {
             e.printStackTrace();
         }
